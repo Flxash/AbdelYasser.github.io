@@ -35,12 +35,20 @@ body {
   
   .links {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
   }
   
   ul li::before {
@@ -52,22 +60,19 @@ body {
     font-size: 2em;
     vertical-align: middle;
     line-height: 20px;
+    flex-shrink: 0;
   }
   
-  .green li::before {
-    color: #24d05a;
+  .light-orange li::before {
+    color: #f4911f;
+  }
+  
+  .orange li::before {
+    color: #ff4916;
   }
   
   .pink li::before {
-    color: #eb4888;
-  }
-  
-  .yellow li::before {
-    color: #e9bc3f;
-  }
-  
-  .blue li::before {
-    color: #10a2f5;
+    color: #f51068;
   }
   
   a {
@@ -80,7 +85,7 @@ body {
   }
   
   body.dark-mode {
-    background: #24252d;
+    background: #000;
   }
   
   body.dark-mode p,
