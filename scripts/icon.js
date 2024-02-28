@@ -40,7 +40,7 @@ const resetLogo = () => {
   shiftAll(images, 0.4, -0.7);
 }
 
-window.onmousemove = e => shiftLogo(e, images);
+//window.onmousemove = e => shiftLogo(e, images);
 
 document.body.onmouseleave = () => {
   if(!getActive()) resetLogo();
@@ -54,3 +54,25 @@ window.onmousedown = e => {
 window.onmouseup = e => resetLogo();
 
 resetLogo();
+
+//CODE FOR ANIMATE BUBBLE
+
+const wrapper = document.getElementById("bubble-wrapper");
+
+const animateBubble = (x) => {  
+  const bubble = document.createElement("div");
+  
+  bubble.className = "bubble";
+  bubble.style.left = `${x}px`;
+  
+  wrapper.appendChild(bubble);
+  
+  setTimeout(() => wrapper.removeChild(bubble), 2000);
+}
+
+//CODE TO RUN BOTH FUNCTIONS ON MOUSE MOVEMENT
+
+window.onmousemove = e => {
+  shiftLogo(e, images);
+  animateBubble(e.clientX);
+}
