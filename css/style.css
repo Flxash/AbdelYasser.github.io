@@ -15,9 +15,20 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set body height to viewport height */
+    margin: 0; /* Remove default margin */
+  }
+
+  .content-container {
+    display: flex;
+  }
   
-  .container {
-    padding-top: 10%;
+  .info-container {
     max-width: 300px;
     margin: 0 0 2em 0;
   }
@@ -64,7 +75,7 @@ body {
   }
   
   .light-orange li::before {
-    color: #f4911f;
+    color: #f89b29;
   }
   
   .orange li::before {
@@ -72,7 +83,7 @@ body {
   }
   
   .pink li::before {
-    color: #f51068;
+    color: #ff0f7b;
   }
   
   a {

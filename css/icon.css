@@ -1,0 +1,13 @@
+#logo {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 1000 / 556;
+    user-select: none;
+    margin-right: 25px;
+  }
+  
+  #logo > img {
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+  }
