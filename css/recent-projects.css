@@ -40,7 +40,7 @@
     width: 300px;  
   }
 
-  #cards:hover > .card > .card-border {
+  #cards:hover > .card::after {
     opacity: 1;
   } 
 
@@ -49,7 +49,7 @@
   }
 
   .card::before,
-  .card > .card-border {
+  .card::after {
     border-radius: inherit;
     content: "";
     height: 100%;
@@ -70,7 +70,7 @@
     z-index: 4;
   }
 
-  .card > .card-border {
+  .card::after {
     background: radial-gradient(
         400px circle at var(--mouse-x) var(--mouse-y),
         rgba(255, 255, 255, 0.3),
