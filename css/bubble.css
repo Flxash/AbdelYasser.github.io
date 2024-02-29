@@ -4,7 +4,7 @@
     }
 
     50% {
-        transform: translate(-50%, -20%);
+        transform: translate(-50%, -30%);
     }
 }
 
@@ -20,10 +20,9 @@
 }
 
 .bubble {
-    height: max(300px, 30vw);
-    width: max(300px, 30vw);
+    height: max(200px, 30vw);
+    width: max(200px, 30vw);
 
-    background-color: rgb(33, 150, 243);
     border-radius: 100%;
 
     position: absolute;

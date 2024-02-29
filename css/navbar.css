@@ -1,0 +1,115 @@
+body[data-nav="true"] > main {
+    transform: translateY(-50%);
+  }
+
+  .rubik-font {
+    font-family: "Rubik", sans-serif;
+  }
+  
+  nav {
+    background-color: rgb(240, 240, 240);
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  #nav-links {  
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: clamp(2rem, 2vw, 3rem);
+    padding: 0rem clamp(1rem, 2vw, 2rem);
+    transform: translateY(70%) scale(0.9);
+    transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
+  }
+  
+  body[data-nav="true"] > nav > #nav-links {
+    transform: translateY(0%) scale(1);
+  }
+  
+  #nav-links > .nav-link {
+    text-decoration: none;
+  }
+  
+  #nav-links > .nav-link > .nav-link-label {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0rem;
+    text-transform: uppercase;
+  }
+  
+  #nav-links > .nav-link > .nav-link-image {
+    width: max(20vw, 400px);
+    aspect-ratio: 1.8 / 1;
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    object-fit: cover;
+  }
+  
+  #nav-toggle {
+    height: 5rem;
+    width: 5rem;
+    position: fixed;
+    z-index: 3;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+
+    background: hsla(41, 100%, 70%, 1);
+    background: linear-gradient(90deg, hsla(41, 100%, 70%, 1) 0%, hsla(7, 76%, 47%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(41, 100%, 70%, 1) 0%, hsla(7, 76%, 47%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(41, 100%, 70%, 1) 0%, hsla(7, 76%, 47%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFCF67", endColorstr="#D3321D", GradientType=1 );
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EF709B", endColorstr="#FA9372", GradientType=1 );
+
+    border: none;
+    border-radius: 5rem;
+    outline: none;
+    box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
+    cursor: pointer;
+    transition: transform, background-color;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+  }
+  
+  #nav-toggle:hover {
+    transform: translateX(-50%) scale(1.04);
+  }
+  
+  #nav-toggle:active {
+    transform: translateX(-50%) scale(0.96);
+  }
+  
+  body[data-nav="true"] > #nav-toggle {
+    background: hsla(333, 100%, 53%, 1);
+    background: linear-gradient(90deg, hsla(33, 94%, 57%, 1) 0%, hsla(333, 100%, 53%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(33, 94%, 57%, 1) 0%, hsla(333, 100%, 53%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(33, 94%, 57%, 1) 0%, hsla(333, 100%, 53%, 1) 100%);
+  }
+  
+  body:not([data-nav="true"]) > #nav-toggle:hover > .open {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  #nav-toggle > i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    color: rgb(246, 231, 224);
+    font-size: 1.75rem;
+    opacity: 0;
+    transition: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 400ms;
+  }
+  
+  body[data-nav="true"] > #nav-toggle > .close {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
