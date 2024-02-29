@@ -10,13 +10,52 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/navbar.css">
+        <link rel="stylesheet" href="css/dark-mode.css">
     </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <body class="dark-mode">
+        <main class="dark-mode">
+            
+
+            <div class="dark-mode-toggler">
+                <input type="checkbox" id="toggler" />
+                <label for="toggler" aria-label="Toggler for Dark Mode"> </label>
+            </div>
+        </main>
         
-        <script src="" async defer></script>
+        <nav>
+            <div id="nav-links">
+
+                <a class="nav-link" href="homepage.html">
+                <h2 class="nav-link-label rubik-font">Home</h2>
+                <img class="nav-link-image" src="assets/home.jpg" />
+                </a>
+
+                <a class="nav-link" href="work.html">
+                <h2 class="nav-link-label rubik-font">Work Experience</h2>
+                <img class="nav-link-image" src="assets/work.avif" />
+                </a>
+
+                <a class="nav-link" href="recent-projects.html">
+                <h2 class="nav-link-label rubik-font">Recente Projects</h2>
+                <img class="nav-link-image" src="assets/github.jpg" />
+                </a>
+
+                <a class="nav-link" href="about-me.html">
+                <h2 class="nav-link-label rubik-font">About Me</h2>
+                <img class="nav-link-image" src="assets/about-me.jpg" />
+                </a>
+                
+            </div>
+        </nav>
+    
+        <button id="nav-toggle" type="button" onclick="toggleNav()">
+        <i class="open"><img class="asset-icon-open" src="assets/icons/more.png" /></i>
+        <i class="close"><img class="asset-icon-close" src="assets/icons/letter.png" /></i>
+        </button>
+
+        <script src="./scripts/switchMode.js"></script>
+        <script src="./scripts/navbar.js"></script>
     </body>
 </html>
