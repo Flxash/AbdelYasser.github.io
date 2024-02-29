@@ -64,7 +64,8 @@
   .card::before {
     background: radial-gradient(
         800px circle at var(--mouse-x) var(--mouse-y),
-        hsla(17, 88.6%, 58.15%, 0.15),
+        hsla(333, 100%, 53%, 0.15) 0%, /* Start color with low opacity */
+        hsla(33, 94%, 57%, 0.15) 100%,
         transparent 40%
     );
     z-index: 4;
@@ -73,7 +74,8 @@
   .card::after {
     background: radial-gradient(
         400px circle at var(--mouse-x) var(--mouse-y),
-        hsla(17, 88.6%, 58.15%, 0.4),
+        hsla(333, 100%, 53%, 0.4) 0%, /* Start color with low opacity */
+        hsla(33, 94%, 57%, 0.4) 100%,
         transparent 40%
     );
     z-index: 2;
