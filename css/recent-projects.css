@@ -21,6 +21,13 @@
     justify-content: center;
   }
   
+/* -- ↓ ↓ ↓ Header styles ↓ ↓ ↓ -- */
+
+
+
+/* -- ↓ ↓ ↓ card styles ↓ ↓ ↓ -- */
+  
+
   #cards {
     display: flex;
     flex-wrap: wrap;
@@ -104,21 +111,21 @@
     color: rgb(240, 240, 240);
   }
   
-  i {  
+  img {  
     color: rgb(240, 240, 240);
   }
   
   .card-image {
     align-items: center;
     display: flex;
-    height: 140px;
+    height: 175px;
     justify-content: center;
     overflow: hidden;
   }
   
-  .card-image > i {
-    font-size: 6em;
-    opacity: 0.25;
+  .card-image > img {
+    height: 128px;
+    opacity: 1;
   }
   
   .card-info-wrapper {
