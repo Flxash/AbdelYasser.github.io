@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/dark-mode.css" />
   </head>
-  <body class="dark-mode" data-nav="false">
+  <body class="dark-mode" data-nav="false" onmousemove="scrollNav(event)">
     <main class="dark-mode">
       <div class="content-wrapper">
         <div class="content-container">
@@ -68,8 +68,8 @@
       </div>
     </main>
   
-    <nav>
-      <div id="nav-links">
+    <nav id="nav-links-container">
+      <div id="nav-links" data-mouse-down-at="0" data-prev-percentage="0">
 
         <a class="nav-link" href="homepage.html">
           <h2 class="nav-link-label rubik-font">Home</h2>
