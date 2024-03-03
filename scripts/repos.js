@@ -11,7 +11,7 @@ async function getRepos() {
 function renderRepos(repos) {
     const cards = document.getElementById('cards');
 
-    repos.sort((a, b) => a.pushed_at - b.pushed_at).slice(0,6).forEach((repo) => {
+    repos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)).slice(0,6).forEach((repo) => {
         const cardHTML = `
             <a class="card" href="${repo.html_url}" target="blank">
                 <div class="card-content">
