@@ -166,31 +166,3 @@
       padding: 0 20px;
     }
   }
-  
-  .tutorial-link a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    gap: 0 5px;
-    border: 2px solid;
-    border-radius: 5px;
-    padding: 4px 10px;
-  }
-  
-  .tutorial-link svg {
-    width: 30px;
-  }
-  
-  @media(max-width: 500px) {
-    .tutorial-link a {
-      font-size: 14px;
-      padding: 2px 4px;
-    }
-    .tutorial-link svg {
-      width: 15px;
-    }
-  }
