@@ -11,8 +11,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/navbar.css">
-        <link rel="stylesheet" href="css/dark-mode.css">
-        <link rel="stylesheet" href="./css/about-me.css">
         <link rel="stylesheet" href="./css/about-me.css">
         <link rel="stylesheet" href="./css/tiles.css">
         <style>
@@ -22,19 +20,24 @@
     <body class="dark-mode">
         <main class="dark-mode">
 
-          <div class="wrapper">
-            <div class="capsule-machine pix">
-              <div class="toy-box"></div>
-              <div class="lock-cover"></div>
-              <div class="cover a"></div>
-              <div class="cover b"></div>
-              <div class="cover c"></div>
-              <div class="cover d"></div>
-              <div class="cover e"></div>
-              <div class="circle pix">
-                <div class="handle"></div>
+          <div id="tiles"></div>
+
+          <h1 id="title" class="centered"></h1>
+            <div class="wrapper">
+              <div class="capsule-machine pix">
+                <div class="toy-box"></div>
+                <div class="lock-cover"></div>
+                <div class="cover a"></div>
+                <div class="cover b"></div>
+                <div class="cover c"></div>
+                <div class="cover d"></div>
+                <div class="cover e"></div>
+                <div class="circle pix">
+                  <div class="handle"></div>
+                </div>
               </div>
-            </div>
+          </h1>
+
         
             <div class="button-wrapper">
               <button class="shake">shake</button>
@@ -71,7 +74,7 @@
                 <img class="nav-link-image" src="assets/github.jpg" />
               </a>
       
-              <a class="nav-link" href="about-me.html">
+              <a class="nav-link" href="test-anime.html">
                 <h2 class="nav-link-label rubik-font">About Me</h2>
                 <img class="nav-link-image" src="assets/about-me.jpg" />
               </a>
@@ -87,6 +90,6 @@
         <script src="./scripts/switchMode.js"></script>
         <script src="./scripts/navbar.js"></script>
         <script src="./scripts/about-me.js"></script>
-        <script src="./scripts/tiles.js"></script>
+        <script type="module" src="./scripts/tiles.js"></script>
     </body>
 </html>
