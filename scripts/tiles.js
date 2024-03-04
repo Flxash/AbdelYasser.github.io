@@ -4,16 +4,13 @@ import anime from '../node_modules/animejs/lib/anime.es.js';
 const wrapper = document.getElementById("tiles");
 
 let columns = 0,
-    rows = 0,
-    toggled = false;
+    rows = 0;
 
 
 const createTile = index => {
   const tile = document.createElement("div");
   
   tile.classList.add("tile");
-  
-  tile.style.opacity = toggled ? 0 : 1;
   
   tile.onclick = e => handleOnClick(index);
   
