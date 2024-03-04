@@ -1,0 +1,202 @@
+article {
+    width: 100%;
+    max-width: 1265px;
+    height: 100vh; /* Set height to full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  figure {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+  }
+  
+  figure figcaption {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  figure figcaption h1 {
+    font: normal normal 400 240% / 1.5cap "Della Respira", serif;
+    padding: 0 0 10px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #333;
+    text-wrap: balance;
+  }
+  
+  body.dark-mode figure figcaption h1{
+    border-bottom: 1px solid #ddd;
+  }
+
+  figure figcaption p {
+    color: #000000;
+    padding-left: 30px;
+    margin: 0;
+    border-left: 10px solid;
+    border-image: repeating-linear-gradient(
+        43deg,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0) 4px,
+        transparent 5px,
+        transparent 9px,
+        rgb(0, 0, 0) 10px
+      )
+      10;
+    text-wrap: pretty;
+  }
+  
+  figure figcaption p span:last-of-type {
+    display: none;
+  }
+  
+  button {
+    font: normal normal 400 12pt / 2cap "Golos Text", sans-serif;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::after {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    content: "";
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover::after {
+    right: 0;
+    transition: all 0.3s ease;
+  }
+  
+  button input {
+    display: none;
+  }
+  
+  button label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover label {
+    color: black;
+    transition: all 0.3s ease;
+  }
+  
+  button label span {
+    display: none;
+  }
+  
+  button:not(:has(input:checked)) label span:first-of-type {
+    display: initial;
+  }
+  
+  button:has(input:checked) label span:last-of-type {
+    display: initial;
+  }
+  
+  section {
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+  
+  section::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(
+      90deg,
+      #ff00bb,
+      #ff00b6,
+      #ff00a8,
+      #ff0b93,
+      #ff347a,
+      #ff585f,
+      #ff7a44,
+      #ff9829,
+      #ffb20c,
+      #ffc500,
+      #ffd100,
+      #ffd500
+    );
+    content: "";
+    z-index: 2;
+    transition: all 1.2s ease;
+  }
+  
+  figure:has(button input:checked) ~ section::before {
+    width: 0px;
+    transition: all 1.2s ease;
+  }
+  
+  figure:has(button input:checked) ~ section {
+    height: 220px;
+    transition: all 0.5s ease;
+  }
+
+  .job-points {
+    opacity: 0;
+    color: #000000;
+    transition: opacity 0.5s ease; /* Add a transition for smoother animation */
+  }
+  
+  .job-points-visible {
+    opacity: 1;
+  }
+
+  body.dark-mode figcaption p {
+    color: #fff;
+    border-image: repeating-linear-gradient(
+        43deg,
+        white,
+        white 4px,
+        transparent 5px,
+        transparent 9px,
+        white 10px
+      )
+      10;
+  }
+
+  body.dark-mode .job-points,
+  body.dark-mode button label {
+    color: #fff;
+  }

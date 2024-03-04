@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="./css/navbar.css">
         <link rel="stylesheet" href="css/dark-mode.css">
         <link rel="stylesheet" href="css/work.css">
+        <link rel="stylesheet" href="css/timeline.css">
     </head>
     <body class="dark-mode">
         <main class="dark-mode">
@@ -29,13 +30,35 @@
                   <div class="bouncing-blob bouncing-blob--pink"></div>
                 </div>
               </div>
-              <div class="hero">
-                <h2>
-                    <img class="swiss-vault" src="./assets/icons/swiss-vault.png">
-                    Swiss Vault
-                </h2>
-                <p>Technology Developer (Co-op)</p>
-              </div>
+              
+              <article>
+                <figure>
+                  <figcaption>
+                    <h1>
+                      Swiss Vault
+                    </h1>
+                    <p>
+                      Technology Developer
+                    </p>
+                  </figcaption>
+                  </figcaption>
+                  <button>
+                    <label for="init">
+                      <span>Expand</span>
+                      <span>Collapse</span>
+                    </label>
+                    <input type="checkbox" name="init" id="init">
+                  </button>
+                </figure>
+                <section>
+                  <ul class="job-points">
+                    <li>Spear headed the devlopment of a web application to track and report unit failures and store them into a database for further evaluation</li>
+                    <li>Researched and trouble shot mutliple high speed communication lines including PCIe</li>
+                    <li>Created a high frequency radio wave emitting antena to test backplane resitance to high frequency noise</li>
+                    <li></li>
+                  </ul>
+                </section>
+              </article>
             
             <div class="dark-mode-toggler">
                 <input type="checkbox" id="toggler" />
@@ -77,5 +100,6 @@
         <script src="./scripts/switchMode.js"></script>
         <script src="./scripts/navbar.js"></script>
         <script src="./scripts/work.js"></script>
+        <script src="./scripts/timeline.js"></script>
     </body>
 </html>
